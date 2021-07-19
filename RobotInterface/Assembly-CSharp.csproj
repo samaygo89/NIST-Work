@@ -71,6 +71,14 @@
      <Compile Include="Assets\Scripts\LoadOnClick_UR5.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick_YuMi.cs" />
      <Compile Include="Assets\Scripts\Mouse_drag.cs" />
+     <Compile Include="Assets\Scripts\Playback\Clicked.cs" />
+     <Compile Include="Assets\Scripts\Playback\CollectClicks.cs" />
+     <Compile Include="Assets\Scripts\Playback\CoordEdit.cs" />
+     <Compile Include="Assets\Scripts\Playback\Go_to_point_clicked.cs" />
+     <Compile Include="Assets\Scripts\Playback\Load.cs" />
+     <Compile Include="Assets\Scripts\Playback\Reset.cs" />
+     <Compile Include="Assets\Scripts\Playback\Save.cs" />
+     <Compile Include="Assets\Scripts\Playback\add_point_clicked.cs" />
      <Compile Include="Assets\Scripts\RotateJoints.cs" />
      <Compile Include="Assets\Scripts\Rotate_old.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
@@ -291,19 +299,19 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.26f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Assets/MathNet Numerics/MathNet.Numerics.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Assets/MathNet Numerics/MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Assets/MathNet Numerics/System.Threading.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Assets/MathNet Numerics/System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.26f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -651,100 +659,100 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.26f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Monetization">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
     <Reference Include="Purchasing.Common">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Sysroot.Linux_x86_64">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-        <HintPath>C:/Users/samay/OneDrive/Documents/NIST-Work/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+        <HintPath>C:/Users/samay/OneDrive/Documents/NIST/RobotInterface/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

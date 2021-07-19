@@ -466,7 +466,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685171}
+      - m_Target: {fileID: 1885847371626685184}
         m_MethodName: pressed
         m_Mode: 1
         m_Arguments:
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685176}
+      - m_Target: {fileID: 1885847371626685187}
         m_MethodName: CoordYEdit
         m_Mode: 1
         m_Arguments:
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685177}
+      - m_Target: {fileID: 1885847371626685185}
         m_MethodName: Delete_Point
         m_Mode: 1
         m_Arguments:
@@ -1792,7 +1792,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685176}
+      - m_Target: {fileID: 1885847371626685187}
         m_MethodName: CoordXEdit
         m_Mode: 1
         m_Arguments:
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685178}
+      - m_Target: {fileID: 1885847371626685186}
         m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685179}
+      - m_Target: {fileID: 1885847371626685183}
         m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685180}
+      - m_Target: {fileID: 1885847371626685182}
         m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685177}
+      - m_Target: {fileID: 1885847371626685185}
         m_MethodName: Pressed
         m_Mode: 1
         m_Arguments:
@@ -4225,7 +4225,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1885847371626685176}
+      - m_Target: {fileID: 1885847371626685187}
         m_MethodName: CoordZEdit
         m_Mode: 1
         m_Arguments:
@@ -11579,6 +11579,14 @@ GameObject:
   - component: {fileID: 1885847371626685179}
   - component: {fileID: 1885847371626685180}
   - component: {fileID: 1885847371626685181}
+  - component: {fileID: 1885847371626685185}
+  - component: {fileID: 1885847371626685186}
+  - component: {fileID: 1885847371626685189}
+  - component: {fileID: 1885847371626685187}
+  - component: {fileID: 1885847371626685184}
+  - component: {fileID: 1885847371626685183}
+  - component: {fileID: 1885847371626685188}
+  - component: {fileID: 1885847371626685182}
   m_Layer: 5
   m_Name: UserInterface_Canvas
   m_TagString: Untagged
@@ -11598,7 +11606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037f13f2c34452149beea3659efa6e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
 --- !u!114 &1885847371626685172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11701,8 +11708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288f9dc74dc488e42b16e7bcedb2a78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
-  positions: []
 --- !u!114 &1885847371626685177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11727,11 +11732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b27c0ef1b71b3649b62ad4755c41869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positions: []
-  target: {fileID: 0}
-  count: 0
-  size: 0
-  pressed: 0
 --- !u!114 &1885847371626685179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11768,6 +11768,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a785c92eeb73671469d6930cfd35a208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1885847371626685182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c36330c9631804bb5877d7cf271616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+--- !u!114 &1885847371626685183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9e45fce69766e4483cec15304e455f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1885847371626685184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6ee46e9c2585c4e8e6011154997639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+--- !u!114 &1885847371626685185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1695f8f1611a8c746af5c10b7cb5d6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1885847371626685186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9de6ae555a58084f94bcecd6a99c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positions: []
+  target: {fileID: 0}
+  count: 0
+  size: 0
+  pressed: 0
+--- !u!114 &1885847371626685187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f46251fe7fc9e44a90e3673c33b513d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+  positions: []
+--- !u!114 &1885847371626685188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c8b3c57d824914a9258999eda7e43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positions: []
+  dropdown: {fileID: 0}
+--- !u!114 &1885847371626685189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885847371626685170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdefa9c247f3184d8d404c2b6fcd66a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  was_prev_clicked: 0
 --- !u!224 &1885847371658949550
 RectTransform:
   m_ObjectHideFlags: 0
