@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 12230ca30b75dbc4fae28a4fdcf0d07a
+timeCreated: 1572023883
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Camera_001
+    100004: //RootNode
+    100006: Lamp
+    100008: Lamp_001
+    100010: node-shape0-name
+    100012: node-shape1-name
+    100014: node-shape2-name
+    100016: node-shape3-name
+    100018: node-shape4-name
+    400000: Camera
+    400002: Camera_001
+    400004: //RootNode
+    400006: Lamp
+    400008: Lamp_001
+    400010: node-shape0-name
+    400012: node-shape1-name
+    400014: node-shape2-name
+    400016: node-shape3-name
+    400018: node-shape4-name
+    2300000: node-shape0-name
+    2300002: node-shape1-name
+    2300004: node-shape2-name
+    2300006: node-shape3-name
+    2300008: node-shape4-name
+    3300000: node-shape0-name
+    3300002: node-shape1-name
+    3300004: node-shape2-name
+    3300006: node-shape3-name
+    3300008: node-shape4-name
+    4300000: node-shape0-name
+    4300002: node-shape1-name
+    4300004: node-shape2-name
+    4300006: node-shape3-name
+    4300008: node-shape4-name
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWMaterial-0
+    second: {fileID: 2100000, guid: fb08520966d7815459457002a45ddea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWMaterial-1
+    second: {fileID: 2100000, guid: 6a36187dc8bdee5449f754667a619d98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWMaterial-2
+    second: {fileID: 2100000, guid: 634803ba8a983ca4ea135c61236167ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWMaterial-3
+    second: {fileID: 2100000, guid: 04b82fe178382254aa226f1fcff699ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWMaterial-4
+    second: {fileID: 2100000, guid: fa5c74ac16d898c4688bc07430ec16df, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
