@@ -20,11 +20,15 @@ public class Clicked : MonoBehaviour
     public List<Vector3> positions = new List<Vector3>();
     public GameObject target;
 
-
+    Dropdown dropdown;
     public int count = 0;
     public int size = 0;
     public bool pressed = false;
     public bool toggle = false;
+    void Start()
+    {
+        dropdown = GameObject.Find("Dropdown").GetComponent<UnityEngine.UI.Dropdown>();
+    }
 
     public void FixedUpdate()
     {
@@ -38,6 +42,7 @@ public class Clicked : MonoBehaviour
                 int index = count / 150;
 
                 target.transform.position = positions[index-1];
+                dropdown.value = index-1;
 
                 //  Additionally, play on real robot
                 if (toggle)

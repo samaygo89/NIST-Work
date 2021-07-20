@@ -14,7 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Threading;
+
 
 public class Mouse_drag : MonoBehaviour
 {
@@ -23,14 +23,7 @@ public class Mouse_drag : MonoBehaviour
     public float additive_ratio = 1.0f;
     public List<Vector3> positions = new List<Vector3>();
     public bool finished = false;
-    public string Vector3_to_String(Vector3 val)
-    {
-        string retval;
-        retval = val.x.ToString("F2") + ",";
-        retval += val.y.ToString("F2") + ",";
-        retval += val.z.ToString("F2");
-        return retval;
-    }
+
     public GameObject createSphere(Color color, Vector3 pos)
     {
         GameObject newObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
@@ -41,6 +34,14 @@ public class Mouse_drag : MonoBehaviour
         return newObj;
 
 
+    }
+            public string Vector3_to_String(Vector3 val)
+    {
+        string retval;
+        retval = val.x.ToString("F2") + ",";
+        retval += val.y.ToString("F2") + ",";
+        retval += val.z.ToString("F2");
+        return retval;
     }
     public void Start()
     {
