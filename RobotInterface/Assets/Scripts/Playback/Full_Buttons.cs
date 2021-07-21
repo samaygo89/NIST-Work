@@ -9,11 +9,16 @@ public class Full_Buttons : MonoBehaviour
     public UnityEngine.UI.Dropdown dropdown;
     public List<Vector3> positions;
     public GameObject target;
+    public bool point_selected;
+    public Vector3 selected_point;
+
     void Start()
     {
         dropdown = GameObject.Find("Dropdown").GetComponent<UnityEngine.UI.Dropdown>();
         target = GameObject.Find("Target");
         positions = target.GetComponent<Mouse_drag>().positions;
+        point_selected = false;
+
     }
 ///<summary>
 ///turns a string in the form: "x,y,z" into a Vector3 and returns the vector;
@@ -118,6 +123,10 @@ public class Full_Buttons : MonoBehaviour
 ///</summary>
     public void Insert_Point_Before(){
         Vector3 newVector = GameObject.Find("Target").transform.position;
+        if(point_selected){
+            newVector=selected_point;
+            point_selected=false;
+        }
         positions.Insert(dropdown.value,newVector);
         dropdown.options.Insert(dropdown.value, new UnityEngine.UI.Dropdown.OptionData(Vector3_to_String(newVector)));
         dropdown.RefreshShownValue();
@@ -127,6 +136,10 @@ public class Full_Buttons : MonoBehaviour
 ///</summary>
     public void Insert_Point_After(){
         Vector3 newVector = GameObject.Find("Target").transform.position;
+        if(point_selected){
+            newVector=selected_point;
+            point_selected=false;
+        }
         positions.Insert(dropdown.value+1,newVector);
         dropdown.options.Insert(dropdown.value+1, new UnityEngine.UI.Dropdown.OptionData(Vector3_to_String(newVector)));
         dropdown.value = dropdown.value+1;
@@ -165,6 +178,14 @@ public class Full_Buttons : MonoBehaviour
             byte[] info = new UTF8Encoding(true).GetBytes(dropdown.options[i].text+"\n");
             fs.Write(info,0,info.Length);
         }
+    }
+
+    public void SelectPoint(){
+        point_selected=true;
+        selected_point = positions[dropdown.value];
+        dropdown.options.RemoveRange(dropdown.value,1);
+        dropdown.RefreshShownValue();
+
     }
 
 }
