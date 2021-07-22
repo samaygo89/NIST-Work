@@ -7,17 +7,16 @@ ScriptsOnlyBuild:
     - BioIK.Orientation
     - BioIK.Position
     - Clicked
-    - CoordEdit
     - CopyTarget
     - DisplayJoints
+    - Full_Buttons
     - GetFromServer
     - GetFromServer_BioIK
-    - Go_to_point_clicked
     - Mouse_drag
+    - Rotation_MouseDrag
     - SceneChanger
     - SetDropdownFromButton
     - TouchControl
-    - add_point_clicked
     - reset
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -98,75 +97,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11478}
     - Class: 114
       Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 11508}
+      Script: {instanceID: 11712}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 12028}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12290}
     - Class: 114
-      Script: {instanceID: 12292}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12404}
+      Script: {instanceID: 12452}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12810}
     - Class: 114
       Script: {instanceID: 12986}
     - Class: 114
       Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13266}
+      Script: {instanceID: 13358}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13414}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 13796}
+      Script: {instanceID: 13814}
     - Class: 114
-      Script: {instanceID: 13818}
+      Script: {instanceID: 13942}
     - Class: 114
-      Script: {instanceID: 13948}
+      Script: {instanceID: 13968}
     - Class: 114
-      Script: {instanceID: 13974}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 14268}
     - Class: 114
-      Script: {instanceID: 14568}
+      Script: {instanceID: 14564}
     - Class: 114
-      Script: {instanceID: 14624}
+      Script: {instanceID: 14620}
     - Class: 114
-      Script: {instanceID: 14626}
+      Script: {instanceID: 14702}
     - Class: 114
-      Script: {instanceID: 14912}
+      Script: {instanceID: 14908}
     - Class: 114
-      Script: {instanceID: 14998}
+      Script: {instanceID: 14994}
     - Class: 114
-      Script: {instanceID: 15022}
+      Script: {instanceID: 15018}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 17806}
     - Class: 114
-      Script: {instanceID: 17768}
-    - Class: 114
-      Script: {instanceID: 27144}
+      Script: {instanceID: 24578}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -208,12 +205,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: InputField
-  - hash:
-      serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: eafb77726b67b7571818a7210a3ce11e
@@ -528,10 +519,10 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 3afc815aa01947ad84681577814eb6a2
+      Hash: 34e7a1bb6f22ac2768d49b4b8142caec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Go_to_point_clicked
+    className: Rotation_MouseDrag
   - hash:
       serializedVersion: 2
       Hash: e540a01426f9ad59088593bf72bcd255
@@ -786,6 +777,12 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
+      Hash: 6c99c8078f531e5d65925a11fe53de7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Clicked
+  - hash:
+      serializedVersion: 2
       Hash: 0574135745ea880aa1c1be2f2057ab89
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
@@ -864,12 +861,6 @@ ScriptsOnlyBuild:
     className: CopyTarget
   - hash:
       serializedVersion: 2
-      Hash: a263aba6ccacf8ccf429c6db5413eb38
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CollectClicks
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: 
@@ -934,12 +925,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Aeroplane
     className: LandingGear
-  - hash:
-      serializedVersion: 2
-      Hash: 9bfe8e0a2ad48cdf80d6b8dc8cbf909e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CoordEdit
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1188,12 +1173,6 @@ ScriptsOnlyBuild:
     className: HandHeldCam
   - hash:
       serializedVersion: 2
-      Hash: 5af2e4e01fdc216ed94e0fa451d089be
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Reset
-  - hash:
-      serializedVersion: 2
       Hash: b294ba655397a2a6c58cddd17cea876c
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Aeroplane
@@ -1338,6 +1317,12 @@ ScriptsOnlyBuild:
     className: ApplicationQuit
   - hash:
       serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -1452,16 +1437,16 @@ ScriptsOnlyBuild:
     className: BioIK
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: add_point_clicked
-  - hash:
-      serializedVersion: 2
       Hash: 98ee10b30bb990b2848e57c28087b122
     assemblyName: Assembly-CSharp.dll
     namespaceName: BioIK
     className: Distance
+  - hash:
+      serializedVersion: 2
+      Hash: ba8b1545ff23af18edbc53848a7f3162
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Full_Buttons
   - hash:
       serializedVersion: 2
       Hash: 3b2f292594e0e9b805577e8c64ec17a2
@@ -1590,12 +1575,6 @@ ScriptsOnlyBuild:
     className: PlatformerCharacter2D
   - hash:
       serializedVersion: 2
-      Hash: 4bd8f5e62317754c1d72e7caa43fe26d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Clicked
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1609,4 +1588,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/0_MainScene.unity
-  playerPath: C:/Users/samay/OneDrive/Documents/NIST Interface Build/RobotInterface.exe
+  playerPath: C:/Users/samay/OneDrive/Documents/NIST/Build/RobotInterface.exe

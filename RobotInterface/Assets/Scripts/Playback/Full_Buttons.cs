@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System.Text;
+using System;
+
 public class Full_Buttons : MonoBehaviour
 {
     public UnityEngine.UI.Dropdown dropdown;
@@ -153,7 +155,7 @@ public class Full_Buttons : MonoBehaviour
 ///Loads a .txt file with vectors into the positions array and the dropdown menu, file needs to be in the form: x,y,z on each line
 ///</summary>
     public void Load(){
-        string path = EditorUtility.OpenFilePanel("", "", "txt");
+        string path = Application.dataPath + "/Save.txt";
         string[] strings_vector = File.ReadAllLines(path);
         //reset
         target.transform.position = new Vector3(0, 0, 0);
@@ -169,23 +171,42 @@ public class Full_Buttons : MonoBehaviour
         positions.Add(new Vector3(newVector.x,newVector.y,newVector.z));
         dropdown.options.Add(new UnityEngine.UI.Dropdown.OptionData(Vector3_to_String(newVector)));
         }
+        dropdown.RefreshShownValue();
     }
     public void Save(){   
-        string path = EditorUtility.OpenFolderPanel("Select Save Folder", "", "");
-        FileStream fs = File.Create(path);
-        for (int i = 0; i <dropdown.options.Count; i++)
+        
+        string path = Application.dataPath + "/Save.txt";
+        if(!File.Exists(path))
         {
-            byte[] info = new UTF8Encoding(true).GetBytes(dropdown.options[i].text+"\n");
-            fs.Write(info,0,info.Length);
+            File.WriteAllText(path,"");
         }
+        else{
+            File.Delete(path);
+            File.WriteAllText(path,"");
+        }
+        for (int i = 0; i <dropdown.options.Count; i++)
+            {
+                string content = dropdown.options[i].text+"\n";
+                File.AppendAllText(path,content);
+            }
+        
+        
+        
     }
-
+///<summary>
+///Selects a point and takes it out of the dropdown menu
+///</summary>
     public void SelectPoint(){
         point_selected=true;
         selected_point = positions[dropdown.value];
         dropdown.options.RemoveRange(dropdown.value,1);
         dropdown.RefreshShownValue();
-
+    }
+///<summary>
+///Rotates the camera around the robot by 10 degrees
+///</summary>
+    public void Rotate_Camera(){
+        GameObject.Find("CameraRotater").transform.Rotate(0,10,0);
     }
 
 }
