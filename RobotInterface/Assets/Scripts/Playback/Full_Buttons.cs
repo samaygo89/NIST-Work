@@ -12,22 +12,49 @@ public class Full_Buttons : MonoBehaviour
     public GameObject target;
     public bool point_selected;
     public Vector3 selected_point;
-    
+    public GameObject selectedDuplicateTarget;
+    public List<GameObject> DuplicateTargets;
+    public UnityEngine.UI.Toggle ShowAllPointsToggle;
 
     void Start()
     {
+        ShowAllPointsToggle = GameObject.Find("ShowAllPointsToggle").GetComponent<UnityEngine.UI.Toggle>();
         dropdown = GameObject.Find("Dropdown").GetComponent<UnityEngine.UI.Dropdown>();
         target = GameObject.Find("Target");
         positions = target.GetComponent<Mouse_drag>().positions;
         point_selected = false;
+        DuplicateTargets= new List<GameObject>();
     }
     ///<summary>
     ///Refreshes the numbering on the dropdown menu
     ///</summary>
-    private void RefreshDropdownNumbering(){
+    private void RefreshDropdownNumbering()
+    {
         for (int i = 0; i < dropdown.options.Count; i++)
         {
-            dropdown.options[i].text = (i+1).ToString()+": " + dropdown.options[i].text.Split(':')[1];
+            dropdown.options[i].text = (i + 1).ToString() + ": " + dropdown.options[i].text.Split(':')[1];
+        }
+    }
+    private GameObject CreateTargetSphere(Vector3 position, bool render){
+        GameObject newobj = Instantiate(GameObject.Find("DuplicateTarget"));
+        MeshRenderer[] renderers = newobj.GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer renderer in renderers){
+           renderer.enabled = render;
+        }
+        newobj.transform.position = position;
+        newobj.transform.localScale = target.transform.localScale;
+        return newobj;
+    }
+    private void TargetPointFunctionRender(bool on){
+        foreach (GameObject newobj in DuplicateTargets)
+        {
+            RenderTarget(newobj,on);
+        }
+    }
+    private void RenderTarget(GameObject obj, bool on){
+        MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer renderer in renderers){
+           renderer.enabled = on;
         }
     }
     ///<summary>
@@ -63,9 +90,10 @@ public class Full_Buttons : MonoBehaviour
     {
         Vector3 newVector = target.transform.position;
         positions.Add(newVector);
-        dropdown.options.Add(new UnityEngine.UI.Dropdown.OptionData(positions.Count.ToString()+": "+ Vector3_to_String(newVector)));
-        dropdown.value = positions.Count-1;
-       
+        dropdown.options.Add(new UnityEngine.UI.Dropdown.OptionData(positions.Count.ToString() + ": " + Vector3_to_String(newVector)));
+        dropdown.value = positions.Count - 1;
+        dropdown.RefreshShownValue();
+        DuplicateTargets.Add(CreateTargetSphere(newVector,ShowAllPointsToggle.isOn));
     }
     ///<summary>
     ///Deletes point currently selected on the dropdown menu
@@ -78,7 +106,9 @@ public class Full_Buttons : MonoBehaviour
             dropdown.options.RemoveRange(dropdown.value, 1);
             RefreshDropdownNumbering();
             dropdown.RefreshShownValue();
-            
+            RenderTarget(DuplicateTargets[dropdown.value],false);
+            DuplicateTargets.RemoveRange(dropdown.value,1);
+
         }
         else
         {
@@ -93,7 +123,7 @@ public class Full_Buttons : MonoBehaviour
 
         float currValue = float.Parse(GameObject.Find("CoordX").GetComponent<UnityEngine.UI.InputField>().text);
         Vector3 newVector = new Vector3(currValue, positions[dropdown.value].y, positions[dropdown.value].z);
-        dropdown.options[dropdown.value].text = (dropdown.value+1).ToString()+": "+Vector3_to_String(newVector);
+        dropdown.options[dropdown.value].text = (dropdown.value + 1).ToString() + ": " + Vector3_to_String(newVector);
         positions[dropdown.value] = newVector;
         target.transform.position = newVector;
     }
@@ -105,7 +135,7 @@ public class Full_Buttons : MonoBehaviour
 
         float currValue = float.Parse(GameObject.Find("CoordY").GetComponent<UnityEngine.UI.InputField>().text);
         Vector3 newVector = new Vector3(positions[dropdown.value].x, currValue, positions[dropdown.value].z);
-        dropdown.options[dropdown.value].text = (dropdown.value+1).ToString()+": "+Vector3_to_String(newVector);
+        dropdown.options[dropdown.value].text = (dropdown.value + 1).ToString() + ": " + Vector3_to_String(newVector);
         positions[dropdown.value] = newVector;
         target.transform.position = newVector;
     }
@@ -117,7 +147,7 @@ public class Full_Buttons : MonoBehaviour
 
         float currValue = float.Parse(GameObject.Find("CoordZ").GetComponent<UnityEngine.UI.InputField>().text);
         Vector3 newVector = new Vector3(positions[dropdown.value].x, positions[dropdown.value].y, currValue);
-        dropdown.options[dropdown.value].text = (dropdown.value+1).ToString()+": "+Vector3_to_String(newVector);
+        dropdown.options[dropdown.value].text = (dropdown.value + 1).ToString() + ": " + Vector3_to_String(newVector);
         positions[dropdown.value] = newVector;
         target.transform.position = newVector;
     }
@@ -142,11 +172,17 @@ public class Full_Buttons : MonoBehaviour
         {
             newVector = selected_point;
             point_selected = false;
+            DuplicateTargets.Insert(dropdown.value,selectedDuplicateTarget);
+        }
+        else{
+            DuplicateTargets.Insert(dropdown.value,CreateTargetSphere(newVector,ShowAllPointsToggle.isOn));
         }
         positions.Insert(dropdown.value, newVector);
-        dropdown.options.Insert(dropdown.value, new UnityEngine.UI.Dropdown.OptionData(":"+Vector3_to_String(newVector)));
+        dropdown.options.Insert(dropdown.value, new UnityEngine.UI.Dropdown.OptionData(":" + Vector3_to_String(newVector)));
+        RenderTarget(DuplicateTargets[dropdown.value],ShowAllPointsToggle.isOn);
         RefreshDropdownNumbering();
         dropdown.RefreshShownValue();
+
     }
     ///<summary>
     ///Inserts the target sphere position as a point after to the point selected on the dropdown menu
@@ -158,16 +194,19 @@ public class Full_Buttons : MonoBehaviour
         {
             newVector = selected_point;
             point_selected = false;
+            DuplicateTargets.Insert(dropdown.value,selectedDuplicateTarget);
+        }
+        else{
+            DuplicateTargets.Insert(dropdown.value,CreateTargetSphere(newVector,ShowAllPointsToggle.isOn));
         }
         positions.Insert(dropdown.value + 1, newVector);
-        dropdown.options.Insert(dropdown.value + 1, new UnityEngine.UI.Dropdown.OptionData(":"+Vector3_to_String(newVector)));
+        dropdown.options.Insert(dropdown.value + 1, new UnityEngine.UI.Dropdown.OptionData(":" + Vector3_to_String(newVector)));
+        DuplicateTargets.Insert(dropdown.value+1,selectedDuplicateTarget);
         dropdown.value = dropdown.value + 1;
+        RenderTarget(DuplicateTargets[dropdown.value+1],ShowAllPointsToggle.isOn);
         RefreshDropdownNumbering();
         dropdown.RefreshShownValue();
     }
-    ///<summary>
-    ///Resets the dropdown menu, positions array, and coordinate edit fields 
-    ///</summary>
 
     ///<summary>
     ///Loads a .txt file with vectors into the positions array and the dropdown menu, file needs to be in the form: x,y,z on each line
@@ -177,7 +216,7 @@ public class Full_Buttons : MonoBehaviour
         string path = Application.dataPath + "/Save.txt";
         string[] strings_vector = File.ReadAllLines(path);
         //reset
-        
+
         dropdown.ClearOptions();
         positions.Clear();
         GameObject.Find("CoordX").GetComponent<UnityEngine.UI.InputField>().text = "";
@@ -188,16 +227,19 @@ public class Full_Buttons : MonoBehaviour
         {
             Vector3 newVector;
             string[] newString = strings_vector[i].Split(':');
-            if(newString.Length == 1){
-                 newVector = String_to_Vector3(strings_vector[i]);
+            if (newString.Length == 1)
+            {
+                newVector = String_to_Vector3(strings_vector[i]);
             }
-            else{
-                 newVector = String_to_Vector3(newString[1]);
+            else
+            {
+                newVector = String_to_Vector3(newString[1]);
             }
             positions.Add(new Vector3(newVector.x, newVector.y, newVector.z));
-            dropdown.options.Add(new UnityEngine.UI.Dropdown.OptionData((i+1).ToString()+": "+Vector3_to_String(newVector)));
+            dropdown.options.Add(new UnityEngine.UI.Dropdown.OptionData((i + 1).ToString() + ": " + Vector3_to_String(newVector)));
+            DuplicateTargets.Add(CreateTargetSphere(newVector,ShowAllPointsToggle.isOn));
         }
-        
+
         dropdown.RefreshShownValue();
     }
     ///<summary>
@@ -220,9 +262,6 @@ public class Full_Buttons : MonoBehaviour
             string content = dropdown.options[i].text + "\n";
             File.AppendAllText(path, content);
         }
-
-
-
     }
     ///<summary>
     ///Selects a point and takes it out of the dropdown menu
@@ -231,7 +270,10 @@ public class Full_Buttons : MonoBehaviour
     {
         point_selected = true;
         selected_point = positions[dropdown.value];
+        selectedDuplicateTarget = DuplicateTargets[dropdown.value];
+        RenderTarget(DuplicateTargets[dropdown.value],false);
         dropdown.options.RemoveRange(dropdown.value, 1);
+        DuplicateTargets.RemoveRange(dropdown.value,1);
         RefreshDropdownNumbering();
         dropdown.RefreshShownValue();
     }
@@ -241,7 +283,15 @@ public class Full_Buttons : MonoBehaviour
     public void Rotate_Camera()
     {
         GameObject.Find("CameraRotater").transform.Rotate(0, 10, 0);
-        
     }
+    public void ShowPoints(){
+        TargetPointFunctionRender(ShowAllPointsToggle.isOn);
+    }
+
+
+    
+
+    
+
 
 }
