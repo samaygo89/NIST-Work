@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a95e782c290e6449b03eca8395721dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
+  dropdown: {fileID: 36484190}
   distance: 0
   additive_ratio: 1
   positions: []
@@ -6146,7 +6146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   distance: 0
-  camera: {fileID: 0}
+  cameraRotater: {fileID: 0}
 --- !u!1 &1665720719
 GameObject:
   m_ObjectHideFlags: 0
@@ -7208,7 +7208,7 @@ GameObject:
   - component: {fileID: 2138311305}
   - component: {fileID: 2138311306}
   m_Layer: 5
-  m_Name: Robot playback
+  m_Name: RobotPlayback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12055,7 +12055,7 @@ MonoBehaviour:
   EE_f: {fileID: 5905250597379585258}
   EE_d: {fileID: 5905250597379585258}
   IKSphere_v: {fileID: 296350681}
-  IKSphere: {fileID: 0}
+  IKSphere: {fileID: 296350681}
   liveUpdateToggle: {fileID: 1885847370357160387}
   modelToggle: {fileID: 1885847370360367145}
 --- !u!114 &1885847371061188950
@@ -13978,11 +13978,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positions: []
-  target: {fileID: 0}
+  target: {fileID: 296350681}
   count: 0
   size: 0
-  pressed: 0
-  toggle: 0
+  isPressed: 0
+  playOnRobot: 0
 --- !u!224 &1885847371658949550
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 
 // Class to store client info & methods
-public class Client : MonoBehaviour {
+public class Client {
 
     public string path = null;
     public int port = 20602;
@@ -35,6 +35,7 @@ public class Client : MonoBehaviour {
     public Client(InputField IPin, int p)
     {
         inputIP = IPin;
+        path = "";
         port = p;
         isConnected = false;
     }

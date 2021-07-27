@@ -45,6 +45,10 @@ public class GetFromServer_BioIK : MonoBehaviour {
     public Toggle modelToggle;
     private Boolean ARModel = false;
 
+    public GetFromServer_BioIK()
+    {
+        crpiClient = new Client(crpiIP, 20602);
+    }
 
     void Start()
     {
@@ -67,6 +71,7 @@ public class GetFromServer_BioIK : MonoBehaviour {
         //129.6.35.80
 
         //crpiIP.text = "169.254.152.10";  // Jeremy's laptop
+
 
         crpiClient = new Client(crpiIP, 20602);
 

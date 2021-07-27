@@ -1,24 +1,22 @@
 ﻿///////////////////////////////////////////////////////////////////////////////
 //
-//  Original System: Mouse_drag.cs
-//  Subsystem:       Human-Robot Interaction
-//  Workfile:        Manus_Open_VR V2
-//  Revision:        1.0 - 6/22/2018
-//  Author:          Esteban Segarra
+//  Filename:        Mouse_drag.cs
+//  Last Revision:   7/27/2021
+//  Authors:         Esteban Segarra, Shelly Bagchi, Samay Govani
 //
 //  Description
 //  ===========
 //  Wrapper to move gameobjects in-game
 //
 ///////////////////////////////////////////////////////////////////////////////
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Mouse_drag : MonoBehaviour
 {
-    public UnityEngine.UI.Dropdown dropdown;
+    public Dropdown dropdown;
     public float distance;
     public float additive_ratio = 1.0f;
     public List<Vector3> positions = new List<Vector3>();
@@ -32,10 +30,9 @@ public class Mouse_drag : MonoBehaviour
         newObj.transform.position = pos;
         newObj.SetActive(false);
         return newObj;
-
-
     }
-            public string Vector3_to_String(Vector3 val)
+
+    public string Vector3_to_String(Vector3 val)
     {
         string retval;
         retval = val.x.ToString("F2") + ",";
@@ -43,13 +40,11 @@ public class Mouse_drag : MonoBehaviour
         retval += val.z.ToString("F2");
         return retval;
     }
+
     public void Start()
     {
-        dropdown = GameObject.Find("Dropdown").GetComponent<UnityEngine.UI.Dropdown>();
-
+        dropdown = GameObject.Find("Dropdown").GetComponent<Dropdown>();
     }
-
-
 
     private void Update()
     {
@@ -70,24 +65,21 @@ public class Mouse_drag : MonoBehaviour
         debug_vector = obj_pos;
         transform.position = obj_pos;
 
-            GameObject.Find("CoordX").GetComponent<UnityEngine.UI.InputField>().text = gameObject.transform.position.x.ToString("F2");
-            GameObject.Find("CoordY").GetComponent<UnityEngine.UI.InputField>().text = gameObject.transform.position.y.ToString("F2");
-            GameObject.Find("CoordZ").GetComponent<UnityEngine.UI.InputField>().text = gameObject.transform.position.z.ToString("F2");
-        
-
+        GameObject.Find("CoordX").GetComponent<InputField>().text = gameObject.transform.position.x.ToString("F2");
+        GameObject.Find("CoordY").GetComponent<InputField>().text = gameObject.transform.position.y.ToString("F2");
+        GameObject.Find("CoordZ").GetComponent<InputField>().text = gameObject.transform.position.z.ToString("F2");
     }
+
     private void OnMouseUp()
     {
-        if (GameObject.Find("Edit").GetComponent<UnityEngine.UI.Toggle>().isOn)
+        if (GameObject.Find("Edit").GetComponent<Toggle>().isOn)
         {
             dropdown.options[dropdown.value].text = Vector3_to_String(transform.position);
             positions[dropdown.value] = transform.position;
-
         }
         else
         {
-            print("Position");
-
+            print("Position logged, " + debug_vector.ToString());
         }
 
     }

@@ -7,7 +7,6 @@ public class Clicked : MonoBehaviour
 {
     private bool isInteger(float num)
     {
-
         if(num == (int)num && num>=1)
         {
             return true;
@@ -17,42 +16,48 @@ public class Clicked : MonoBehaviour
             return false;
         }
     }
+
     public List<Vector3> positions = new List<Vector3>();
     public GameObject target;
 
     Dropdown dropdown;
     public int count = 0;
     public int size = 0;
-    public bool pressed = false;
-    public bool toggle = false;
+    public bool isPressed = false;
+    public bool playOnRobot = false;
+    
     void Start()
     {
         dropdown = GameObject.Find("Dropdown").GetComponent<UnityEngine.UI.Dropdown>();
+        target = GameObject.Find("Target");
     }
 
     public void FixedUpdate()
     {
         
-        if (pressed)
+        if (isPressed)
         {
-            
-            
-            if (isInteger(count / 150) && count/150<=size)
-            {
-                int index = count / 150;
+            // I would have done this slightly differently, just to give you an idea:
+            // if (count%150==0 ...   -Shelly
 
+            int index = count / 150;
+            if (isInteger(index) && index<=size)
+            {
                 target.transform.position = positions[index-1];
                 dropdown.value = index-1;
 
-                //  Additionally, play on real robot - NOTE this is too fast
-                if (toggle)
+                //  Additionally, play on real robot
+                //  NOTE:  This is too fast because the robot command is non-blocking....
+                //  Need to insert a delay but didn't want to mess up your playback function yet
+                /*if (playOnRobot)
                 {
-                    print("Setting pose on physical robot");
-                    //GameObject.Find("Cmd2").GetComponent<Button>().onClick.Invoke();
-                }
-                    
+                    print("Setting pose on physical robot...");
+                    GameObject.Find("Cmd2").GetComponent<Button>().onClick.Invoke();
+                }*/
             }
             count++;
+
+            // Think about checking index<=size again here and setting isPressed=false?  -Shelly
         }
         
     }
@@ -60,19 +65,20 @@ public class Clicked : MonoBehaviour
 
     public void Pressed()
     {
-       
-        target = GameObject.Find("Target");
-        positions = GameObject.Find("Target").GetComponent<Mouse_drag>().positions;
+        positions = target.GetComponent<Mouse_drag>().positions;
         // New - robot playback toggle
-        toggle = GameObject.Find("Robot playback").GetComponent<Toggle>().isOn;
+        playOnRobot = GameObject.Find("RobotPlayback").GetComponent<Toggle>().isOn;
+
         size = positions.Count;
         if (size == 0)
         {
             print("Not Enough Points");
+            return;
         }
-        pressed = true;
+
+        isPressed = true;
         count = 0;
-        
+
 
     }
 
