@@ -62,7 +62,7 @@ public class GetFromServer_BioIK : MonoBehaviour {
 
         //crpiIP.text = "169.254.152.40";  // Ethernet - CollabLab-A
         //crpiIP.text = "169.254.152.39";  // Ethernet??  Temp
-        crpiIP.text = "169.254.152.52";  // Wifi
+        crpiIP.text = "169.254.152.53";  // Wifi
         //crpiIP.text = "129.6.108.19";  // Wifi - NISTnet
         //129.6.35.80
 

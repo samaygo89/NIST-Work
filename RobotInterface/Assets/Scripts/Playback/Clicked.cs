@@ -44,11 +44,11 @@ public class Clicked : MonoBehaviour
                 target.transform.position = positions[index-1];
                 dropdown.value = index-1;
 
-                //  Additionally, play on real robot
+                //  Additionally, play on real robot - NOTE this is too fast
                 if (toggle)
                 {
                     print("Setting pose on physical robot");
-                    GameObject.Find("Cmd2").GetComponent<Button>().onClick.Invoke();
+                    //GameObject.Find("Cmd2").GetComponent<Button>().onClick.Invoke();
                 }
                     
             }
