@@ -268,6 +268,7 @@ public class Full_Buttons : MonoBehaviour
     ///</summary>
     public void SelectPoint()
     {
+        if(!point_selected){
         point_selected = true;
         selected_point = positions[dropdown.value];
         selectedDuplicateTarget = DuplicateTargets[dropdown.value];
@@ -276,6 +277,12 @@ public class Full_Buttons : MonoBehaviour
         DuplicateTargets.RemoveRange(dropdown.value,1);
         RefreshDropdownNumbering();
         dropdown.RefreshShownValue();
+        }
+        if(point_selected){
+            print("Point Already Selected:");
+            print(selected_point);
+        }
+        
     }
     ///<summary>
     ///Rotates the camera around the robot by 10 degrees

@@ -47,5 +47,8 @@ public class reset : MonoBehaviour {
         GameObject.Find("CoordX").GetComponent<UnityEngine.UI.InputField>().text = "";
         GameObject.Find("CoordY").GetComponent<UnityEngine.UI.InputField>().text = "";
         GameObject.Find("CoordZ").GetComponent<UnityEngine.UI.InputField>().text = "";
+        GameObject.Find("Dropdown").GetComponent<Full_Buttons>().DuplicateTargets.Clear();
+        GameObject.Find("Dropdown").GetComponent<Full_Buttons>().selected_point = new Vector3();
+        GameObject.Find("Dropdown").GetComponent<Full_Buttons>().point_selected = false;
     }
 }
