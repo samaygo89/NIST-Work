@@ -34,17 +34,20 @@ public class Clicked : MonoBehaviour
 
     public void FixedUpdate()
     {
-        
+        count++;
         if (isPressed)
         {
-            // I would have done this slightly differently, just to give you an idea:
-            // if (count%150==0 ...   -Shelly
 
-            int index = count / 150;
-            if (isInteger(index) && index<=size)
+
+            int index;
+            if (count%150 == 0)
             {
+                index = count/150;
+                if(index<=size){
                 target.transform.position = positions[index-1];
                 dropdown.value = index-1;
+                }
+                
 
                 //  Additionally, play on real robot
                 //  NOTE:  This is too fast because the robot command is non-blocking....
@@ -54,10 +57,14 @@ public class Clicked : MonoBehaviour
                     print("Setting pose on physical robot...");
                     GameObject.Find("Cmd2").GetComponent<Button>().onClick.Invoke();
                 }*/
+                if(index>size){
+                isPressed = false;
+                print("Playback Complete");
+                }
             }
-            count++;
+            
 
-            // Think about checking index<=size again here and setting isPressed=false?  -Shelly
+            
         }
         
     }
