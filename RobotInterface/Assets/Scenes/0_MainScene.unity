@@ -2807,6 +2807,7 @@ GameObject:
   - component: {fileID: 697730419}
   - component: {fileID: 697730418}
   - component: {fileID: 697730417}
+  - component: {fileID: 697730420}
   m_Layer: 5
   m_Name: CoordX
   m_TagString: Untagged
@@ -2947,6 +2948,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697730415}
   m_CullTransparentMesh: 0
+--- !u!114 &697730420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697730415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd51b14e2e4043a4999814474f925f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 0}
+  positions: []
+  target: {fileID: 0}
+  point_selected: 0
+  selected_point: {x: 0, y: 0, z: 0}
+  selectedDuplicateTarget: {fileID: 0}
+  DuplicateTargets: []
+  ShowAllPointsToggle: {fileID: 0}
 --- !u!1 &734126878
 GameObject:
   m_ObjectHideFlags: 0
