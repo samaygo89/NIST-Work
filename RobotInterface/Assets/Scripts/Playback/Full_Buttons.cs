@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.Text;
 using System;
+using SFB;
 
 public class Full_Buttons : MonoBehaviour
 {
@@ -271,9 +272,10 @@ public class Full_Buttons : MonoBehaviour
     public void Load()
     {
         //create a path string that starts at the data path and starts with save.txt
-        string path = Application.dataPath + "/Save.txt";
+        string[] path = StandaloneFileBrowser.OpenFilePanel("", Application.dataPath, "txt", false);
+        
         //read file into an array of strings with each entry being a different line
-        string[] strings_vector = File.ReadAllLines(path);
+        string[] strings_vector = File.ReadAllLines(path[0]);
         //reset interface
         DuplicateTargets.Clear();
         dropdown.ClearOptions();
@@ -335,6 +337,7 @@ public class Full_Buttons : MonoBehaviour
                 counter++;
             }
         }
+        
         for (int i = 0; i < dropdown.options.Count; i++)
         {
             string content = dropdown.options[i].text + "\n";

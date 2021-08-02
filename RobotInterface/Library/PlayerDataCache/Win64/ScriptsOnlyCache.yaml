@@ -20,8 +20,6 @@ ScriptsOnlyBuild:
     - reset
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -50,8 +48,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.ToggleGroup
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/0_MainScene.unity:
     - Class: 1
@@ -91,79 +87,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 11478}
-    - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11492}
     - Class: 114
       Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 11712}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 12048}
     - Class: 114
-      Script: {instanceID: 12290}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12402}
+      Script: {instanceID: 12314}
     - Class: 114
-      Script: {instanceID: 12452}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12576}
+      Script: {instanceID: 12476}
     - Class: 114
-      Script: {instanceID: 12636}
+      Script: {instanceID: 12606}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12666}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13102}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13400}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13436}
     - Class: 114
-      Script: {instanceID: 13792}
+      Script: {instanceID: 13452}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 13838}
     - Class: 114
-      Script: {instanceID: 13942}
+      Script: {instanceID: 13860}
     - Class: 114
-      Script: {instanceID: 13968}
+      Script: {instanceID: 13988}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14268}
+      Script: {instanceID: 14066}
     - Class: 114
-      Script: {instanceID: 14564}
+      Script: {instanceID: 14316}
     - Class: 114
-      Script: {instanceID: 14620}
+      Script: {instanceID: 14614}
     - Class: 114
-      Script: {instanceID: 14702}
+      Script: {instanceID: 14670}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 14752}
     - Class: 114
-      Script: {instanceID: 14994}
+      Script: {instanceID: 14958}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 15046}
     - Class: 114
-      Script: {instanceID: 17806}
+      Script: {instanceID: 15070}
     - Class: 114
-      Script: {instanceID: 24578}
+      Script: {instanceID: 17970}
+    - Class: 114
+      Script: {instanceID: 20852}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -435,6 +431,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BasicSample
+  - hash:
+      serializedVersion: 2
       Hash: 234d407605354852c48e57df17c9a1c6
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -519,7 +521,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 34e7a1bb6f22ac2768d49b4b8142caec
+      Hash: 0092d8d387d0e26fbdb4b56201a30309
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Rotation_MouseDrag
@@ -651,6 +653,12 @@ ScriptsOnlyBuild:
     className: sendPose
   - hash:
       serializedVersion: 2
+      Hash: 6650a204d51a53926852c34131b2f830
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasSampleOpenFileText
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -777,7 +785,7 @@ ScriptsOnlyBuild:
     className: NetworkTransformVisualizer
   - hash:
       serializedVersion: 2
-      Hash: 6c99c8078f531e5d65925a11fe53de7e
+      Hash: 7763f58f0633b697e28a7d1e182d6b15
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Clicked
@@ -921,6 +929,12 @@ ScriptsOnlyBuild:
     className: ParticleSceneControls
   - hash:
       serializedVersion: 2
+      Hash: e686f3c1011429b41e0a20f13c16d626
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasSampleOpenFileImage
+  - hash:
+      serializedVersion: 2
       Hash: 65c9e8f2d0653991d518373cd4240b97
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Aeroplane
@@ -931,6 +945,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: MobileControlRig
+  - hash:
+      serializedVersion: 2
+      Hash: 6650a204d51a53926852c34131b2f830
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasSampleSaveFileImage
   - hash:
       serializedVersion: 2
       Hash: 019e3c7efde00809f73968b7c21bbd08
@@ -1039,6 +1059,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ur5_kinematics
+  - hash:
+      serializedVersion: 2
+      Hash: 6650a204d51a53926852c34131b2f830
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasSampleOpenFileTextMultiple
   - hash:
       serializedVersion: 2
       Hash: 2294ba4929e515b4b46046eff1f6b057
@@ -1347,12 +1373,6 @@ ScriptsOnlyBuild:
     className: FollowTarget
   - hash:
       serializedVersion: 2
-      Hash: 97acf291b82a439fb7a9b3800006a1fe
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Client
-  - hash:
-      serializedVersion: 2
       Hash: 74fdef42e5d1b91d250d09f9fc6f54da
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets._2D
@@ -1443,7 +1463,7 @@ ScriptsOnlyBuild:
     className: Distance
   - hash:
       serializedVersion: 2
-      Hash: ba8b1545ff23af18edbc53848a7f3162
+      Hash: 96033b4af2fe28c5ecdba7f6f4c3a4c4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Full_Buttons
@@ -1539,6 +1559,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 6650a204d51a53926852c34131b2f830
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanvasSampleSaveFileText
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1588,4 +1614,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/0_MainScene.unity
-  playerPath: C:/Users/samay/OneDrive/Documents/NIST/Build/RobotInterface.exe
+  playerPath: C:/Users/samay/OneDrive/Documents/NIST/build/RobotInterface.exe
