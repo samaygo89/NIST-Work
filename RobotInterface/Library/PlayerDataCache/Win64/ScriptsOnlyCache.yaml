@@ -159,7 +159,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17970}
     - Class: 114
-      Script: {instanceID: 20852}
+      Script: {instanceID: 20848}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1614,4 +1614,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/0_MainScene.unity
-  playerPath: C:/Users/samay/OneDrive/Documents/NIST/build/RobotInterface.exe
+  playerPath: C:/Users/sbagchi/Documents/GitHub/NIST-Work/RobotInterface/Build/RobotInterface.exe
